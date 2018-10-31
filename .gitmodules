@@ -1,0 +1,15 @@
+[submodule "vim/bundle/tender.vim"]
+	path = vim/bundle/tender.vim
+	url = https://github.com/jacoborus/tender.vim
+[submodule "vim/bundle/tender"]
+	path = vim/bundle/tender
+	url = https://github.com/jacoborus/tender.vim
+[submodule "vim/bundle/gruvbox"]
+	path = vim/bundle/gruvbox
+	url = https://github.com/morhetz/gruvbox
+[submodule "vim/bundle/vim-cpp-enhanced-highlight"]
+	path = vim/bundle/vim-cpp-enhanced-highlight
+	url = https://github.com/octol/vim-cpp-enhanced-highlight
+[submodule "vim/bundle/airline"]
+	path = vim/bundle/airline
+	url = https://github.com/vim-airline/vim-airline
