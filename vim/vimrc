@@ -104,7 +104,7 @@ set magic
 " Show matching brackets when text indicator is over them
 set showmatch 
 " How many tenths of a second to blink when matching brackets
-set mat=1
+set mat=0
 
 " No annoying sound on errors
 set noerrorbells
@@ -137,7 +137,7 @@ set background=
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
-let g:cpp_experimental_simple_template_highlight = 1
+"let g:cpp_experimental_simple_template_highlight = 1
 
 let g:airline_theme = 'tender'
 colorscheme tender
