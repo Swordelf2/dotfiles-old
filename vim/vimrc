@@ -11,6 +11,7 @@
 "    -> vimgrep searching and cope displaying
 "    -> Spell checking
 "    -> Misc
+"    -> Plugin configurations
 "    -> Helper functions
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -27,7 +28,7 @@ call pathogen#helptags()
 set history=500
 
 set number relativenumber
-set stal=0
+set stal=1
 
 " Enable filetype plugins
 filetype plugin indent on
@@ -237,15 +238,6 @@ set laststatus=2
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Editing mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has("autocmd")
-    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
-endif
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -261,6 +253,18 @@ map <leader>x :e ~/buffer.md<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugin configurations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"" CtrlP
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_max_height = 20
+let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+
+map <leader>j :CtrlP<cr>
+map <leader>o :CtrlPMRU<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
