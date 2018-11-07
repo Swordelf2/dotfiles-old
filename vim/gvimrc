@@ -1,5 +1,11 @@
 set gfn=IBM\ Plex\ Mono\ 11
 
+if has('win32') || has ('win64')
+    source ~/vimfiles/local
+else
+    source ~/.vim/local
+endif
+
 set guicursor-=a:blinkon0
 set guioptions+=c
 set guioptions-=m
