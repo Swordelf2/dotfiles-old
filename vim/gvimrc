@@ -1,12 +1,12 @@
-set gfn=IBM\ Plex\ Mono\ 11
+set gfn=IBM\ Plex\ Mono\ 15
 
 if has('win32') || has ('win64')
     source ~/vimfiles/local
-else
-    source ~/.vim/local
 endif
+"else
+"    source ~/.vim/local
+"endif
 
-set guicursor-=a:blinkon0
 set guioptions+=c
 set guioptions-=m
 set guioptions-=T
@@ -18,5 +18,8 @@ set guioptions-=r
 set guioptions-=R
 set guioptions-=l
 set guioptions-=L
+
+" Disable cursor blinking in GUI
+set guicursor+=a:blinkon0
 
 colo gruvbox

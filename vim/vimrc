@@ -254,6 +254,10 @@ map <leader>x :e ~/buffer.md<cr>
 map <leader>pp :setlocal paste!<cr>
 
 
+" Reset cscope
+command Csupd !cscope -b -R
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin configurations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
