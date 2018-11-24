@@ -192,9 +192,9 @@ bindsym $mod+Shift+Print exec --no-startup-id import -window root /tmp/screensho
 bindsym $mod+Shift+c exec --no-startup-id ~/.config/i3/screenshot.sh
 
 
-exec xrdb ~/.Xresources
+exec --no-startup-id xrdb ~/.Xresources
 # Wallpaper
-exec --no-startup-id "feh --bg-scale ~/Wallpapers/wallpaper.jpg"
+exec --no-startup-id "feh --bg-scale ~/Wallpapers/wallpaper1.jpg"
 
 # Status bar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -203,5 +203,5 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec"xinput --set-prop $(xinput | grep 'DELL.*Touchpad' | awk '{print $6}' | sed 's/id=//g') 'libinput Accel Speed' 0.25"
 exec"xinput --set-prop $(xinput | grep 'DELL.*Touchpad' | awk '{print $6}' | sed 's/id=//g') 'libinput Tapping Enabled' 1"
 
-exec compton -f
+exec --no-startup-id compton -f
 
