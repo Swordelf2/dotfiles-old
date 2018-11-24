@@ -82,9 +82,13 @@ Give wheel group permissions via visudo command
 <Audio packages>
 pulseaudio pulseaudio-alsa
 
+For NVIDIA card you need to install drivers here first
+install nvidia package
+install nvidia-settings package
+sudo systemctl enabe nvidia-persistenced.service
+
 <X.org>
 xorg xorg-xinit
-Choose graphics card driver here
 
 Install desktop environment
 
@@ -92,7 +96,7 @@ echo "exec <de>" > ~/.xinitrc
 
 Install additional packages
 
-install sddm
+optionally install a display manager
 sudo systemctl enable sddm.service
 
 (EFI)
