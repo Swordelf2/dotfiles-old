@@ -1,5 +1,5 @@
 gvim
-polybar
+polybar (!!ttf-unifont aur package needed)
 deluge
 ufw
 
