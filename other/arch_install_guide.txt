@@ -1,0 +1,100 @@
+NOTE: some of the steps are optional, this is merely a reminder[sdflk
+
+TO INCREASE FONT SIZE
+setfont <font-name>
+Some of the larger fonts are: iso02-12x22
+
+Check internet connection, or connect to a wifi using wifi-menu
+(ethernet preferred)
+
+Partition hard drive (fdisk)
+cfdisk is an interactive tool
+for swap:
+mkswap
+swapon
+gpt/efi partition is 512MB in size annd has to be formatted as FAT32
+ext4 is recommeneded for other linux partitions
+One can use mkfs.<fs> command to partition
+
+Mount partitions (into /mnt as root)
+Example:
+mount /dev/sda2 /mnt
+mkdir /mnt/home
+mount /dev/sda3 /mnt/home
+
+Installation process
+pacstrap -i /mnt base base-devel
+
+Generate fstab file
+genfstab -U -p /mnt >> /mnt/etc/fstab
+
+Change root into the new system
+arch-chroot /mnt/ /bin/bash
+
+Generate locale
+Change /etc/locale.gen: uncomment required lines
+locale-gen
+/etc/locale.conf
+    LANG=en_US.UTF-8
+
+Set timezone
+ln -sf /usr/share/zoneinfo/<city> /etc/localtime
+
+hwclock --systohc --utc
+
+echo <pc-name> > /etc/hostname
+also edit /etc/hosts, add the following line:
+127.0.1.1 localhost.localdomain <pc-name
+better to follow arch wiki here
+
+Configure network (one probably wants networkmanager package)
+systemctl enable dhcpcd
+or
+systemctl enable NetworkManager
+
+passwd ?
+
+install microcode (intel-ucode package)
+
+After installing grub optionally change /etc/default/grub
+(Legacy)
+istall grub
+grub-install /dev/sda (note: the whole drive)
+grub-mkconfig -o /boot/grub/grub.cfg
+(EFI)
+mount efi partition into /mnt/efi
+install grub and efibootmgr packages
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+
+
+exit from chroot
+umount -R /mnt
+
+reboot now
+
+Finish installation
+useradd -m -g users -Gwheel -s /bin/bash <username>
+passwd <username>
+
+Give wheel group permissions via visudo command
+
+
+<Audio packages>
+pulseaudio pulseaudio-alsa
+
+<X.org>
+xorg xorg-xinit
+Choose graphics card driver here
+
+Install desktop environment
+
+echo "exec <de>" > ~/.xinitrc
+
+Install additional packages
+
+install sddm
+sudo systemctl enable sddm.service
+
+(EFI)
+install os-prober
+grub-mkconfig -o /boot/grub/grub.cfg

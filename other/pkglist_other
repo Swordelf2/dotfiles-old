@@ -1,0 +1,19 @@
+gvim
+polybar
+deluge
+ufw
+
+
+# Install at system install
+vim
+intel-ucode
+networkmanager
+
+os-prober ?
+
+
+# from AUR
+
+i3lock-color
+osu-lazer-git
+polybar
