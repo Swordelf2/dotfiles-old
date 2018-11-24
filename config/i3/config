@@ -199,9 +199,5 @@ exec --no-startup-id "feh --bg-scale ~/Wallpapers/wallpaper1.jpg"
 # Status bar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-# Touchpad configuration
-exec --no-startup-id "xinput --set-prop $(xinput | grep 'DELL.*Touchpad' | awk '{print $6}' | sed 's/id=//g') 'libinput Accel Speed' 0.25"
-exec --no-startup-id "xinput --set-prop $(xinput | grep 'DELL.*Touchpad' | awk '{print $6}' | sed 's/id=//g') 'libinput Tapping Enabled' 1"
-
 exec --no-startup-id compton -f
 
