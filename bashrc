@@ -4,7 +4,7 @@
 DOTFILES_DIR="$HOME/.dotfiles/bash"
 DOTFILES='env,alias'
 for DOTFILE in $DOTFILES_DIR/{env,alias}; do
-    source "$DOTFILE" 2> ~/out.log
+    source "$DOTFILE"
 done
 
 # for ranger
