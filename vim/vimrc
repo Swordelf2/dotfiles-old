@@ -132,18 +132,19 @@ syntax enable
 " Enable 256 colors palette in Gnome Terminal
 set t_Co=256
 
-colorscheme tender
-set background=
+set background=dark
 
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 "let g:cpp_experimental_simple_template_highlight = 1
 
-let g:airline_theme = 'tender'
-colorscheme tender
+" colors for gruvbox are fixed in bashrc
+let g:airline_powerline_fonts = 1
+let g:gruvbox_italic = 1
+colorscheme gruvbox
+hi Normal ctermbg=None
 
-hi Normal ctermbg=NONE
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
