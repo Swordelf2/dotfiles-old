@@ -141,9 +141,9 @@ let g:cpp_class_decl_highlight = 1
 
 " colors for gruvbox are fixed in bashrc
 let g:airline_powerline_fonts = 1
+let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_italic = 1
 colorscheme gruvbox
-hi Normal ctermbg=None
 
 
 " Set utf8 as standard encoding and en_US as the standard language
