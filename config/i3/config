@@ -177,4 +177,3 @@ exec --no-startup-id "feh --bg-scale ~/Wallpapers/wallpaper1.jpg"
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 exec --no-startup-id compton -f
-
