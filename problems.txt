@@ -1,0 +1,1 @@
+1: ranger doesn't launch bashrc, hence colors in gruvbox are bad

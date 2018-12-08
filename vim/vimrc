@@ -267,7 +267,8 @@ command Csupd !cscope -b -R
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
-let g:ctrlp_switch_buffer = 'etvh'
+" do not jump to any windows upon opening a file
+let g:ctrlp_switch_buffer = 0
 
 nmap <leader>j :CtrlP<cr>
 nmap <leader>o :CtrlPMRU<cr>
