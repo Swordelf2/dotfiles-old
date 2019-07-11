@@ -1,4 +1,7 @@
-NOTE: some of the steps are optional, this is merely a reminder[sdflk
+NOTE: some of the steps are optional, this is merely a reminder
+      MAIN ARTICLE is on arch wiki
+
+check whether the processor is AMD or Intel first (for microcode)
 
 TO INCREASE FONT SIZE
 setfont <font-name>
@@ -6,6 +9,11 @@ Some of the larger fonts are: iso02-12x22
 
 Check internet connection, or connect to a wifi using wifi-menu
 (ethernet preferred)
+
+(if paired with windws)
+Shrink some partition without touching EFI partitions
+shutdown -r -t 0
+(no need to create efi partition?)
 
 Partition hard drive (fdisk)
 cfdisk is an interactive tool
@@ -64,8 +72,12 @@ grub-mkconfig -o /boot/grub/grub.cfg
 (EFI)
 mount efi partition into /mnt/efi
 install grub and efibootmgr packages
+grub-mkconfig -o /boot/grub/grub.cfg
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 
+
+// configrm that grup has installed
+ls -l /boot/efi/EFI/arch/ must hve brubx64.efi
 
 exit from chroot
 umount -R /mnt
