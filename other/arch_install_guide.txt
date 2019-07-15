@@ -3,6 +3,11 @@ NOTE: some of the steps are optional, this is merely a reminder
 
 check whether the processor is AMD or Intel first (for microcode)
 
+(if paired with windws)
+Shrink some partition without touching EFI partitions
+shutdown -r -t 0
+(no need to create efi partition?)
+
 TO INCREASE FONT SIZE
 setfont <font-name>
 Some of the larger fonts are: iso02-12x22
@@ -10,19 +15,20 @@ Some of the larger fonts are: iso02-12x22
 Check internet connection, or connect to a wifi using wifi-menu
 (ethernet preferred)
 
-(if paired with windws)
-Shrink some partition without touching EFI partitions
-shutdown -r -t 0
-(no need to create efi partition?)
+(**)
+Check system clock
+timedatectl set-ntp true
+timedatectl status
 
 Partition hard drive (fdisk)
+2 are required: swap and system partitions - both primary
 cfdisk is an interactive tool
 for swap:
 mkswap
 swapon
 gpt/efi partition is 512MB in size annd has to be formatted as FAT32
 ext4 is recommeneded for other linux partitions
-One can use mkfs.<fs> command to partition
+One can use mkfs.<fs> command to create filesystem
 
 Mount partitions (into /mnt as root)
 Example:
@@ -31,7 +37,7 @@ mkdir /mnt/home
 mount /dev/sda3 /mnt/home
 
 Installation process
-pacstrap -i /mnt base base-devel
+pacstrap -i /mnt base base-devel vim
 
 Generate fstab file
 genfstab -U -p /mnt >> /mnt/etc/fstab
@@ -52,14 +58,15 @@ hwclock --systohc --utc
 
 echo <pc-name> > /etc/hostname
 also edit /etc/hosts, add the following line:
-127.0.1.1 localhost.localdomain <pc-name
-better to follow arch wiki here
+/// !! 127.0.1.1 localhost.localdomain <pc-name
+_________better to follow arch wiki here_________
 
 Configure network (one probably wants networkmanager package)
 systemctl enable dhcpcd
 or
 systemctl enable NetworkManager
 
+Create password
 passwd ?
 
 install microcode (intel-ucode package)
@@ -68,6 +75,7 @@ After installing grub optionally change /etc/default/grub
 (Legacy)
 istall grub
 grub-install /dev/sda (note: the whole drive)
+install os-prober for windows detection and mount the windows partition before grubmkconfig
 grub-mkconfig -o /boot/grub/grub.cfg
 (EFI)
 mount efi partition into /mnt/efi
@@ -76,10 +84,11 @@ grub-mkconfig -o /boot/grub/grub.cfg
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 
 
-// configrm that grup has installed
+// configrm that grup has installed (for EFI only)
 ls -l /boot/efi/EFI/arch/ must hve brubx64.efi
 
 exit from chroot
+then
 umount -R /mnt
 
 reboot now
