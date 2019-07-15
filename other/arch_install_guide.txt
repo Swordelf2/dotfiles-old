@@ -92,6 +92,7 @@ then
 umount -R /mnt
 
 reboot now
+(or just reboot better maybe)
 
 Finish installation
 useradd -m -g users -Gwheel -s /bin/bash <username>
@@ -123,3 +124,5 @@ sudo systemctl enable sddm.service
 (EFI)
 install os-prober
 grub-mkconfig -o /boot/grub/grub.cfg
+
+use pkglist to install stuff
