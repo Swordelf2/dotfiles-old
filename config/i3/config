@@ -19,7 +19,7 @@ for_window [class="^.*"] border pixel 2
 gaps inner 15
 gaps outer 15
 
-set $term urxvt
+set $term st
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -168,6 +168,8 @@ bindsym $mod+Shift+End exec --no-startup-id ~/.config/i3/lock.sh && systemctl su
 bindsym $mod+Shift+Print exec --no-startup-id import -window root /tmp/screenshot.png
 bindsym $mod+Shift+c exec --no-startup-id ~/.config/i3/screenshot.sh
 
+# Change mouse acceleration
+exec --no-startup-id xinput --set-prop 9 'libinput Accel Speed' -0.3
 
 exec --no-startup-id xrdb ~/.Xresources
 # Wallpaper
