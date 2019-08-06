@@ -1,5 +1,0 @@
-Download luke-st-git from aur for st and configure font in config.h
-Install with makepkg -si
-Reinstall with makepkg -sif
-
-Install neovim from main arch repo and use the init.vim from .dotfiles

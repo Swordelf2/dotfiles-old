@@ -10,6 +10,3 @@ done
 # for ranger
 RANGER_FILE='/usr/share/doc/ranger/examples/bash_automatic_cd.sh'
 [ -f $RANGER_FILE ] && . "$RANGER_FILE"
-
-# for gruvbox (vim)
-source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
