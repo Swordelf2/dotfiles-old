@@ -1,3 +1,5 @@
+i3-gaps
+
 alsa-utils
 cmake
 compton
@@ -16,3 +18,8 @@ ttf-ibm-plex
 unzip
 xorg
 xorg-xinit
+
+ranger
+
+w3m (for ranger)
+
