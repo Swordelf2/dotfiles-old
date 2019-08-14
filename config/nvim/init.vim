@@ -1,4 +1,5 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" " => Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -11,6 +12,11 @@ Plug 'neomake/neomake'
 Plug 'scrooloose/nerdtree'
 
 Plug 'rust-lang/rust.vim'
+
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'sebastianmarkow/deoplete-rust'
+
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -74,7 +80,7 @@ set ruler
 set cmdheight=1
 
 " A buffer becomes hidden when it is abandoned
-set hid
+set hidden
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -226,6 +232,8 @@ endtry
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+nnoremap <leader>e :checktime<cr>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -267,6 +275,16 @@ nmap <leader>o :CtrlPMRU<cr>
 
 "" Tagbar
 nmap <leader>s :TagbarToggle<cr>
+
+"" Vimwiki
+let g:vimwiki_list = [{ 'path': '~/Documents/notes/',
+    \ 'syntax': 'markdown', 'ext': '.md'}]
+
+"" Vim Racer
+let g:deoplete#enable_at_startup = 1
+let g:racer_cmd = '~/.cargo/bin/racer'
+let g:deoplete#sources#rust#racer_binary='/home/swordelf/.cargo/bin/racer'
+let g:deoplete#sources#rust#rust_source_path='/home/swordelf/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
