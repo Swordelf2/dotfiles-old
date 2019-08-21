@@ -11,10 +11,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'neomake/neomake'
 Plug 'scrooloose/nerdtree'
 
-Plug 'rust-lang/rust.vim'
+Plug 'junegunn/fzf.vim'
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'sebastianmarkow/deoplete-rust'
+Plug 'rust-lang/rust.vim'
 
 Plug 'vimwiki/vimwiki'
 
@@ -279,12 +278,6 @@ nmap <leader>s :TagbarToggle<cr>
 "" Vimwiki
 let g:vimwiki_list = [{ 'path': '~/Documents/notes/',
     \ 'syntax': 'markdown', 'ext': '.md'}]
-
-"" Vim Racer
-let g:deoplete#enable_at_startup = 1
-let g:racer_cmd = '~/.cargo/bin/racer'
-let g:deoplete#sources#rust#racer_binary='/home/swordelf/.cargo/bin/racer'
-let g:deoplete#sources#rust#rust_source_path='/home/swordelf/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
