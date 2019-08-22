@@ -154,7 +154,6 @@ bindsym $mod+shift+o resize grow width 5 px or 5 ppt
 hide_edge_borders both
 
 # Program shortcuts
-bindsym $mod+r exec $term -e ranger
 
 # XF86 bindings
 bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle

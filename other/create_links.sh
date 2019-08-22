@@ -18,5 +18,4 @@ ln -sf "$HOME/.dotfiles/config/nvim" "$HOME/.config/nvim"
 ln -sf "$HOME/.dotfiles/config/polybar" "$HOME/.config/polybar"
 ln -sf "$HOME/.dotfiles/config/qutebrowser" "$HOME/.config/qutebrowser"
 ln -sf "$HOME/.dotfiles/config/ranger" "$HOME/.config/ranger"
-
-
+ln -sf "$HOME/.dotfiles/config/fish" "$HOME/.config/fish"

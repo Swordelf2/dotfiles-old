@@ -15,7 +15,7 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'rust-lang/rust.vim'
 
-Plug 'vimwiki/vimwiki'
+Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
@@ -236,8 +236,6 @@ nnoremap <leader>e :checktime<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Quickly open a buffer for scribble
 map <leader>q :e ~/buffer<cr>
@@ -248,9 +246,11 @@ map <leader>x :e ~/buffer.md<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
-
 " Reset cscope
 command Csupd !cscope -b -R
+
+" Yank path to current dir
+noremap <leader>yd :let @+ = expand("%:p")<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -276,7 +276,7 @@ nmap <leader>o :CtrlPMRU<cr>
 nmap <leader>s :TagbarToggle<cr>
 
 "" Vimwiki
-let g:vimwiki_list = [{ 'path': '~/Documents/notes/',
+let g:vimwiki_list = [{ 'path': '~/notes',
     \ 'syntax': 'markdown', 'ext': '.md'}]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
