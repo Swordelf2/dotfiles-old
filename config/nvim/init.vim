@@ -6,8 +6,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasr/molokai'
+Plug 'sonph/onehalf', {'rtp': 'vim'}
 
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'neomake/neomake'
 Plug 'scrooloose/nerdtree'
 
@@ -127,6 +127,7 @@ set foldcolumn=0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Enable syntax highlighting
 syntax enable 
 
@@ -138,15 +139,10 @@ set t_Co=256
 
 set background=dark
 
-let g:cpp_class_scope_highlight = 1
-let g:cpp_member_variable_highlight = 1
-let g:cpp_class_decl_highlight = 1
-"let g:cpp_experimental_simple_template_highlight = 1
-
-" colors for gruvbox are fixed in bashrc
 let g:airline_powerline_fonts = 1
-colorscheme molokai
-let g:airline_theme='luna'
+
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -199,9 +195,6 @@ map <leader>bd :Bclose<cr>:tabclose<cr>gT
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
 
-map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr>
-
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
@@ -249,8 +242,8 @@ map <leader>pp :setlocal paste!<cr>
 " Reset cscope
 command Csupd !cscope -b -R
 
-" Yank path to current dir
-noremap <leader>yd :let @+ = expand("%:p")<cr>
+" Yank path to dir of the current file
+noremap <leader>yd :let @+ = expand("%:p:h")<cr>:pwd<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -262,15 +255,9 @@ let g:neomake_open_list = 2
 "" NerdTree
 map <leader>n :NERDTreeToggle<cr>
 
-"" CtrlP
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
-" do not jump to any windows upon opening a file
-let g:ctrlp_switch_buffer = 0
 
-nmap <leader>j :CtrlP<cr>
-nmap <leader>o :CtrlPMRU<cr>
+nmap <leader>j :Files<cr>
+nmap <leader>f :Rg 
 
 "" Tagbar
 nmap <leader>s :TagbarToggle<cr>

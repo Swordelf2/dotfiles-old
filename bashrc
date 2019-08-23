@@ -17,7 +17,7 @@ RANGER_FILE='/usr/share/doc/ranger/examples/bash_automatic_cd.sh'
 # --hidden: Search hidden files and folders
 # --follow: Follow symlinks
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 
 # drop into fish
-exec fish
+# exec fish
