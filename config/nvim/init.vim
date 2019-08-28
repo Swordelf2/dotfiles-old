@@ -94,8 +94,12 @@ set smartcase
 " Highlight search results
 set hlsearch
 
-" Makes search act like search in modern browsers
+" Incremental highlight while searching
 set incsearch 
+
+" Incremental highlight for :s command
+" Note that this is exclusive to NeoVim
+set inccommand=nosplit
 
 " Don't redraw while executing macros (good performance config)
 set lazyredraw 
