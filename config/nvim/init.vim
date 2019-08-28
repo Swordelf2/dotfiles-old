@@ -141,8 +141,8 @@ set background=dark
 
 let g:airline_powerline_fonts = 1
 
-colorscheme onehalfdark
-let g:airline_theme='onehalfdark'
+colorscheme molokai
+let g:airline_theme='luna'
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -201,6 +201,12 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove 
 map <leader>t<leader> :tabnext 
+
+" Even more useful mapping
+" Next tab
+nnoremap J gt
+" Previous tab
+nnoremap K gT
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
