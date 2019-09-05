@@ -15,6 +15,10 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'rust-lang/rust.vim'
 
+""
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'sebastianmarkow/deoplete-rust'
+
 Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
 
 call plug#end()
