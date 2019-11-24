@@ -171,8 +171,9 @@ bindsym $mod+Shift+c exec --no-startup-id ~/.config/i3/screenshot.sh
 exec --no-startup-id xinput --set-prop 9 'libinput Accel Speed' -0.3
 
 exec --no-startup-id xrdb ~/.Xresources
+
 # Wallpaper
-exec --no-startup-id "feh --bg-scale ~/wallpapers/wallpaper1.jpg"
+exec_always --no-startup-id ~/.fehbg
 
 # Status bar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
