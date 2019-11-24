@@ -3,23 +3,21 @@ i3-gaps
 alsa-utils
 cmake
 compton
-cscope
 dmenu
 feh
 firefox
 imagemagick
 noto-fonts
 openssh
+python
 python2
 ranger
-rxvt-unicode
 tree
 ttf-ibm-plex
 unzip
 xorg
 xorg-xinit
 
-ranger
 
-w3m (for ranger)
+w3m
 

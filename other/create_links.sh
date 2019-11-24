@@ -5,6 +5,8 @@
 # Currently, if a directory with the same name as a link exists,
 # it goes crazy
 
+mkdir -p "$HOME/.config"
+
 ln -sf "$HOME/.dotfiles/bash_profile" "$HOME/.bash_profile"
 ln -sf "$HOME/.dotfiles/bashrc" "$HOME/.bashrc"
 ln -sf "$HOME/.dotfiles/gdbinit" "$HOME/.gdbinit"
@@ -18,4 +20,3 @@ ln -sf "$HOME/.dotfiles/config/nvim" "$HOME/.config/nvim"
 ln -sf "$HOME/.dotfiles/config/polybar" "$HOME/.config/polybar"
 ln -sf "$HOME/.dotfiles/config/qutebrowser" "$HOME/.config/qutebrowser"
 ln -sf "$HOME/.dotfiles/config/ranger" "$HOME/.config/ranger"
-ln -sf "$HOME/.dotfiles/config/fish" "$HOME/.config/fish"
