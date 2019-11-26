@@ -15,6 +15,8 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'rust-lang/rust.vim'
 
+Plug 'wlangstroth/vim-racket'
+
 ""
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'sebastianmarkow/deoplete-rust'
