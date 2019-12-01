@@ -7,6 +7,8 @@
 
 mkdir -p "$HOME/.config"
 
+ln -sf "$HOME/.dotfiles/zshrc" "$HOME/.zshrc"
+ln -sf "$HOME/.dotfiles/zprofile" "$HOME/.zprofile"
 ln -sf "$HOME/.dotfiles/bash_profile" "$HOME/.bash_profile"
 ln -sf "$HOME/.dotfiles/bashrc" "$HOME/.bashrc"
 ln -sf "$HOME/.dotfiles/gdbinit" "$HOME/.gdbinit"
