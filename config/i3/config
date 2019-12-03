@@ -167,10 +167,13 @@ bindsym $mod+Shift+End exec --no-startup-id ~/.config/i3/lock.sh && systemctl su
 bindsym $mod+Shift+Print exec --no-startup-id import -window root /tmp/screenshot.png
 bindsym $mod+Shift+c exec --no-startup-id ~/.config/i3/screenshot.sh
 
-# Change mouse acceleration
-exec --no-startup-id xinput --set-prop 9 'libinput Accel Speed' -0.3
+## Autostart
 
+# Load ~/.Xresources
 exec --no-startup-id xrdb ~/.Xresources
+
+# Change mouse sensitivity
+exec --no-startup-id xinput --set-prop 13 'Coordinate Transformation Matrix' 0.7 0.0 0.0 0.0 0.7 0.0 0.0 0.0 1.0
 
 # Wallpaper
 exec_always --no-startup-id ~/.fehbg
@@ -178,4 +181,8 @@ exec_always --no-startup-id ~/.fehbg
 # Status bar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
+# Compton
 exec --no-startup-id compton -f
+
+# nvidia-settings
+exec --no-startup-id nvidia-settings --load-config-only

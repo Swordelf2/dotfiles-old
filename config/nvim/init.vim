@@ -3,6 +3,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'freitass/todo.txt-vim'
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasr/molokai'
@@ -44,6 +46,7 @@ set autoread
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = ","
+let maplocalleader = "\\"
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -281,6 +284,8 @@ nmap <leader>s :TagbarToggle<cr>
 "" Vimwiki
 let g:vimwiki_list = [{ 'path': '~/notes',
     \ 'syntax': 'markdown', 'ext': '.md'}]
+
+"" Todo.txt-vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
