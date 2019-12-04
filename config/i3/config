@@ -19,7 +19,7 @@ for_window [class="^.*"] border pixel 2
 gaps inner 15
 gaps outer 10
 
-set $term st -f "monospace:size=13"
+set $term st
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
