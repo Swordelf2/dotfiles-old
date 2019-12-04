@@ -12,12 +12,15 @@ Plug 'sonph/onehalf', {'rtp': 'vim'}
 
 Plug 'neomake/neomake'
 Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons' "icons
 
 Plug 'junegunn/fzf.vim'
 
 Plug 'rust-lang/rust.vim'
 
 Plug 'wlangstroth/vim-racket'
+
+Plug 'ptzz/lf.vim'
 
 ""
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

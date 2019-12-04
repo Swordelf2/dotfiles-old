@@ -49,7 +49,7 @@ echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # Use lf to switch directories and bind it to ctrl-o
-lfcd () {
+f () {
     tmp="$(mktemp)"
     lf -last-dir-path="$tmp" "$@"
     if [ -f "$tmp" ]; then
@@ -66,6 +66,7 @@ bindkey '^e' edit-command-line
 
 # Aliases
 
+alias vim=nvim
 alias ls='ls --color=auto'
 alias tree='tree -C'
 alias p='python'
