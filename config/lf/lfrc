@@ -121,6 +121,7 @@ lf -remote "send $id $cmd \"$res\""
 # Custom mappings
 map ,
 
+map ,r reload
 map ,d delete
 map ,e extract
 

@@ -2,10 +2,11 @@
 # Should be updated alongside the configs (when new config files are created)
 # TODO: it probably needs to be improved
 # with some way of error checking
-# Currently, if a directory with the same name as a link exists,
-# it goes crazy
 
 mkdir -p "$HOME/.config"
+
+# First delete all links to directories (cuz of the werid interaction with dirs)
+rm -f "$HOME/.config/{i3,nvim,polybar,qutebrowser,ranger,fontconfig,lf,mutt}"
 
 ln -sf "$HOME/.dotfiles/zshrc" "$HOME/.zshrc"
 ln -sf "$HOME/.dotfiles/zprofile" "$HOME/.zprofile"
@@ -24,3 +25,4 @@ ln -sf "$HOME/.dotfiles/config/qutebrowser" "$HOME/.config/qutebrowser"
 ln -sf "$HOME/.dotfiles/config/ranger" "$HOME/.config/ranger"
 ln -sf "$HOME/.dotfiles/config/fontconfig" "$HOME/.config/fontconfig"
 ln -sf "$HOME/.dotfiles/config/lf" "$HOME/.config/lf"
+ln -sf "$HOME/.dotfiles/config/mutt" "$HOME/.config/mutt"
