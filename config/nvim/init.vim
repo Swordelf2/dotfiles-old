@@ -266,6 +266,8 @@ command Csupd !cscope -b -R
 
 " Yank path to dir of the current file
 noremap <leader>yd :let @+ = expand("%:p:h")<cr>:pwd<cr>
+" Yank path to the current file
+noremap <leader>yp :let @+ = expand("%:p")<cr>:echo expand("%:p")<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
