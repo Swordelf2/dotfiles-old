@@ -67,10 +67,12 @@ bindkey '^e' edit-command-line
 # Aliases
 
 alias vim=nvim
+alias v=nvim
 alias ls='ls --color=auto'
 alias tree='tree -C'
 alias p='python'
-alias less='less -R'
+alias less='less -Ri' # R for colors, i for ignore-case searches
+alias xr='xrdb ~/.Xresources'
 
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"

@@ -252,8 +252,8 @@ nnoremap <leader>e :checktime<cr>
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<cr>
+" Quit shortcut
+map <leader>q :q
 
 " Quickly open a markdown buffer for scribble
 map <leader>x :e ~/buffer.md<cr>
@@ -276,9 +276,10 @@ noremap <leader>yp :let @+ = expand("%:p")<cr>:echo expand("%:p")<cr>
 "" Neomake
 let g:neomake_open_list = 2
 
+let g:vim_markdown_folding_disabled = 1
+
 "" NerdTree
 map <leader>n :NERDTreeToggle<cr>
-
 
 nmap <leader>j :Files<cr>
 nmap <leader>f :Rg 
