@@ -125,4 +125,4 @@ map ,r reload
 map ,d delete
 map ,e extract
 
-map ,f :fzf_jump
+map ,j :fzf_jump

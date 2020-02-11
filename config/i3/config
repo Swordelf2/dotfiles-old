@@ -186,3 +186,6 @@ exec --no-startup-id compton -f
 
 # nvidia-settings
 exec --no-startup-id nvidia-settings --load-config-only
+
+# alsa settings
+exec --no-startup-id alsactl restore
