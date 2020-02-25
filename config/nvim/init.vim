@@ -12,6 +12,7 @@ Plug 'sonph/onehalf', {'rtp': 'vim'}
 
 Plug 'neomake/neomake'
 Plug 'scrooloose/nerdtree'
+Plug 'majutsushi/tagbar'
 Plug 'ryanoasis/vim-devicons' "icons
 
 Plug 'junegunn/fzf.vim'
