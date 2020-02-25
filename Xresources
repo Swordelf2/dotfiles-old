@@ -4,6 +4,6 @@
 *background:       #1b1918
 !!*background: rgba(0, 0, 0, .7)
 
-*.font: monospace:size=13
+*.font: monospace:pixelsize=15
 
 *.alpha: 0.75

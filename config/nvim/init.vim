@@ -20,8 +20,6 @@ Plug 'rust-lang/rust.vim'
 
 Plug 'wlangstroth/vim-racket'
 
-Plug 'ptzz/lf.vim'
-
 ""
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'sebastianmarkow/deoplete-rust'
@@ -282,7 +280,6 @@ let g:vim_markdown_folding_disabled = 1
 map <leader>n :NERDTreeToggle<cr>
 
 nmap <leader>j :Files<cr>
-nmap <leader>f :Rg 
 
 "" Tagbar
 nmap <leader>s :TagbarToggle<cr>
@@ -292,6 +289,9 @@ let g:vimwiki_list = [{ 'path': '~/notes',
     \ 'syntax': 'markdown', 'ext': '.md'}]
 
 "" Todo.txt-vim
+
+"" Rust.vim
+nmap <leader>f :RustFmt<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
