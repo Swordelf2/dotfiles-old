@@ -68,8 +68,8 @@ bindkey '^e' edit-command-line
 
 alias vim=nvim
 alias v=nvim
-alias ls='ls --color=auto'
-alias tree='tree -C'
+alias ls='exa -l'
+alias tree='exa -T'
 alias p='python'
 alias less='less -Ri' # R for colors, i for ignore-case searches
 alias xr='xrdb ~/.Xresources'
