@@ -21,6 +21,8 @@ Plug 'rust-lang/rust.vim'
 
 Plug 'wlangstroth/vim-racket'
 
+Plug 'lervag/vimtex'
+
 ""
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'sebastianmarkow/deoplete-rust'
@@ -216,12 +218,6 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove 
 map <leader>t<leader> :tabnext 
-
-" Even more useful mapping
-" Next tab
-nnoremap J gt
-" Previous tab
-nnoremap K gT
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
