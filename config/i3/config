@@ -83,7 +83,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+p layout stacking
-bindsym $mod+w layout tabbed
+#bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -160,6 +160,10 @@ bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%-
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+
 
+# SPECIAL mic mute
+bindsym $mod+q exec --no-startup-id amixer set Capture nocap
+bindsym $mod+w exec --no-startup-id amixer set Capture cap
+
 # Screen lock and suspend
 bindsym $mod+Shift+End exec --no-startup-id ~/.config/i3/lock.sh && systemctl suspend
 
@@ -168,9 +172,6 @@ bindsym $mod+Shift+Print exec --no-startup-id import -window root /tmp/screensho
 bindsym $mod+Shift+c exec --no-startup-id ~/.config/i3/screenshot.sh
 
 ## Autostart
-
-# Load ~/.Xresources
-exec --no-startup-id xrdb ~/.Xresources
 
 # Change mouse sensitivity
 exec --no-startup-id xinput --set-prop 13 'Coordinate Transformation Matrix' 0.7 0.0 0.0 0.0 0.7 0.0 0.0 0.0 1.0
