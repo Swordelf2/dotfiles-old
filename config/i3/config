@@ -19,7 +19,7 @@ for_window [class="^.*"] border pixel 2
 gaps inner 15
 gaps outer 10
 
-set $term st
+set $term alacritty
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -174,7 +174,7 @@ bindsym $mod+Shift+c exec --no-startup-id ~/.config/i3/screenshot.sh
 ## Autostart
 
 # Change mouse sensitivity
-exec --no-startup-id xinput --set-prop 13 'Coordinate Transformation Matrix' 0.7 0.0 0.0 0.0 0.7 0.0 0.0 0.0 1.0
+exec_always --no-startup-id xinput --set-prop 14 'Coordinate Transformation Matrix' 2.25 0.0 0.0 0.0 2.25 0.0 0.0 0.0 1.0
 
 # Wallpaper
 exec_always --no-startup-id ~/.fehbg

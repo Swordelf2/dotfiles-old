@@ -21,7 +21,7 @@ Plug 'rust-lang/rust.vim'
 
 Plug 'wlangstroth/vim-racket'
 
-Plug 'lervag/vimtex'
+"Plug 'lervag/vimtex'
 
 ""
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

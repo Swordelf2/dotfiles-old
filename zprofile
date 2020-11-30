@@ -3,6 +3,7 @@ export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
 export MANPAGER='less'
+export BROWSER=firefox
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 
